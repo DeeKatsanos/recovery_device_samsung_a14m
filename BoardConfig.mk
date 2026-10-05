@@ -10,6 +10,9 @@ DEVICE_PATH := device/samsung/a14m
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# Assert OTA
+TARGET_OTA_ASSERT_DEVICE := a14m
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
