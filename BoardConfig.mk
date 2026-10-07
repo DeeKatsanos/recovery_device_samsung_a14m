@@ -15,7 +15,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 
 # Vendor - Modules
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
-TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)\")
+TW_LOAD_VENDOR_MODULES := "$(notdir $(wildcard $(DEVICE_PATH)/recovery/root/lib/modules/*.ko))"
 
 # Bypass elf checks
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
